@@ -12,6 +12,7 @@ export const formatDistanceFromNow = (dateStr) =>
     .replace('in', 'In');
 
 // Supabase needs an ISO date string. However, that string will be different on every render because the MS or SEC have changed, which isn't good. So we use this trick to remove any time
+
 export const getToday = function (options = {}) {
   const today = new Date();
 
