@@ -135,7 +135,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
         />
       </FormRow>
 
-      <FormRow>
+      <FormRow direction='horizontal'>
         {/* type is an HTML attribute! */}
         <Button
           disabled={isWorking}

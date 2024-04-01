@@ -8,6 +8,10 @@ const StyledTable = styled.div`
   background-color: var(--color-grey-0);
   border-radius: 7px;
   overflow: hidden;
+
+  @media (max-width: 900px) {
+    overflow-x: scroll;
+  }
 `;
 
 const CommonRow = styled.div`
@@ -16,6 +20,10 @@ const CommonRow = styled.div`
   column-gap: 2.4rem;
   align-items: center;
   transition: none;
+
+  @media (max-width: 900px) {
+    /* grid-template-columns: ${(props) => props.$columns * 2}; */
+  }
 `;
 
 const StyledHeader = styled(CommonRow)`
@@ -34,6 +42,14 @@ const StyledRow = styled(CommonRow)`
 
   &:not(:last-child) {
     border-bottom: 1px solid var(--color-grey-100);
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    /* align-: center; */
+    text-align: center;
+    /* justify-items: center; */
   }
 `;
 

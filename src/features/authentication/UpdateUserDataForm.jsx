@@ -67,7 +67,7 @@ function UpdateUserDataForm() {
         />
       </FormRow>
 
-      <FormRow>
+      <FormRow direction='row'>
         <Button
           type='reset'
           variation='secondary'

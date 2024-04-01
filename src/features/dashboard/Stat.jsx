@@ -12,6 +12,17 @@ const StyledStat = styled.div`
   grid-template-rows: auto auto;
   column-gap: 1.6rem;
   row-gap: 0.4rem;
+
+  @media (max-width: 1200px) {
+    grid-column: auto/span 2;
+  }
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
 `;
 
 const Icon = styled.div`
@@ -30,6 +41,9 @@ const Icon = styled.div`
     height: 3.2rem;
     color: var(--color-${(props) => props.color}-700);
   }
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+  }
 `;
 
 const Title = styled.h5`
@@ -39,6 +53,10 @@ const Title = styled.h5`
   letter-spacing: 0.4px;
   font-weight: 600;
   color: var(--color-grey-500);
+
+  @media (max-width: 600px) {
+    align-self: center;
+  }
 `;
 
 const Value = styled.p`

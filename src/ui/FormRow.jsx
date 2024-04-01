@@ -25,6 +25,14 @@ const StyledFormRow = styled.div`
     justify-content: flex-end;
     gap: 1.2rem;
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: ${(props) =>
+      props.$direction ? props.$direction : 'column'};
+    gap: 1.2rem;
+    justify-content: center !important;
+  }
 `;
 
 const Label = styled.label`
@@ -36,9 +44,9 @@ const Error = styled.span`
   color: var(--color-red-700);
 `;
 
-function FormRow({ label, error, children }) {
+function FormRow({ label, error, children, direction }) {
   return (
-    <StyledFormRow>
+    <StyledFormRow $direction={direction}>
       {label && <Label htmlFor={children.props.id}>{label}</Label>}
       {children}
       {error && <Error>{error}</Error>}

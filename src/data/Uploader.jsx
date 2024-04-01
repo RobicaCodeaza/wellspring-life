@@ -3,7 +3,7 @@ import { isFuture, isPast, isToday } from 'date-fns';
 import supabase from '../services/supabase';
 import Button from '../ui/Button';
 import { subtractDates } from '../utils/helpers';
-
+import styled from 'styled-components';
 import { bookings } from './data-bookings';
 import { cabins } from './data-cabins';
 import { guests } from './data-guests';
@@ -15,6 +15,20 @@ import Heading from '../ui/Heading.jsx';
 //   maxGuestsPerBooking: 10,
 //   breakfastPrice: 15,
 // };
+
+const Div = styled.div`
+  margin-top: auto;
+  background-color: #c7d2fe;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
 async function deleteGuests() {
   const { error } = await supabase.from('guests').delete().gt('id', 0);
@@ -127,18 +141,7 @@ function Uploader() {
   }
 
   return (
-    <div
-      style={{
-        marginTop: 'auto',
-        backgroundColor: '#c7d2fe',
-        padding: '8px',
-        borderRadius: '5px',
-        textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '8px',
-      }}
-    >
+    <Div>
       <Heading as='h3'>SAMPLE DATA</Heading>
 
       <Button onClick={uploadAll} disabled={isLoading}>
@@ -148,7 +151,7 @@ function Uploader() {
       <Button onClick={uploadBookings} disabled={isLoading}>
         Upload bookings ONLY
       </Button>
-    </div>
+    </Div>
   );
 }
 

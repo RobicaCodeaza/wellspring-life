@@ -122,6 +122,14 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   font-size: 62.5%;
+  @media (max-width:1400px)
+  {
+    font-size:  56.25%;
+  }
+  @media (max-width: 768px)
+  {
+font-size: 50%;
+  }
 }
 
 body {

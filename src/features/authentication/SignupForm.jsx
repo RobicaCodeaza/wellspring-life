@@ -78,7 +78,7 @@ function SignupForm() {
         />
       </FormRow>
 
-      <FormRow>
+      <FormRow direction='row'>
         {/* type is an HTML attribute! */}
         <Button
           variation='secondary'

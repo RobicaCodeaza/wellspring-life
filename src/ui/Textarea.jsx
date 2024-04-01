@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Textarea = styled.textarea`
   padding: 0.8rem 1.2rem;
@@ -8,6 +8,10 @@ const Textarea = styled.textarea`
   box-shadow: var(--shadow-sm);
   width: 100%;
   height: 8rem;
+  @media (max-width: 768px) {
+    height: 12rem;
+    width: 90%;
+  }
 `;
 
 export default Textarea;

@@ -7,6 +7,7 @@ import {
   HiOutlineUsers,
   HiOutlineCog6Tooth,
 } from 'react-icons/hi2';
+import { useMobileNav } from '../context/ToggleMobileNav.jsx';
 
 const NavList = styled.ul`
   display: flex;
@@ -14,11 +15,21 @@ const NavList = styled.ul`
   gap: 0.8rem;
 `;
 
+const Span = styled.span`
+  @media (max-width: 768px) {
+    display: none;
+  }
+  @media (max-width: 550px) {
+    display: block;
+  }
+`;
+
 const StyledNavLink = styled(NavLink)`
   &:link,
   &:visited {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1.2rem;
 
     color: var(--color-grey-600);
@@ -43,6 +54,11 @@ const StyledNavLink = styled(NavLink)`
     height: 2.4rem;
     color: var(--color-grey-400);
     transition: all 0.3s;
+
+    @media (max-width: 768px) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   &:hover svg,
@@ -54,37 +70,48 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function MainNav() {
+  const { openMenu, toggleMobileNav } = useMobileNav();
+
   return (
     <nav>
       <NavList>
         <li>
-          <StyledNavLink to='/dashboard'>
+          <StyledNavLink
+            to='/dashboard'
+            onClick={openMenu ? toggleMobileNav : ''}
+          >
             <HiOutlineHome></HiOutlineHome>
-            <span>Home</span>
+            <Span>Home</Span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/bookings'>
+          <StyledNavLink
+            to='/bookings'
+            onClick={openMenu ? toggleMobileNav : ''}
+          >
             <HiOutlineCalendarDays></HiOutlineCalendarDays>
-            <span>Booking</span>
+            <Span>Booking</Span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/cabins'>
+          <StyledNavLink to='/cabins' onClick={openMenu ? toggleMobileNav : ''}>
             <HiOutlineHomeModern></HiOutlineHomeModern>
-            <span>Cabins</span>
+            <Span>Cabins</Span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/users'>
+          <StyledNavLink to='/users' onClick={openMenu ? toggleMobileNav : ''}>
             <HiOutlineUsers></HiOutlineUsers>
-            <span>Users</span>
+            <Span>Users</Span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/settings'>
+          <StyledNavLink
+            to='/settings'
+            onClick={openMenu ? toggleMobileNav : ''}
+          >
             <HiOutlineCog6Tooth></HiOutlineCog6Tooth>
-            <span>Settings</span>
+            <Span>Settings</Span>
           </StyledNavLink>
         </li>
       </NavList>

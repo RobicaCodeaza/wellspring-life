@@ -8,6 +8,9 @@ const Menu = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const StyledToggle = styled.button`
@@ -27,6 +30,9 @@ const StyledToggle = styled.button`
     height: 2.4rem;
     color: var(--color-grey-700);
   }
+  @media (max-width: 768px) {
+    /* padding: 0; */
+  }
 `;
 
 const StyledList = styled.ul`
@@ -38,6 +44,10 @@ const StyledList = styled.ul`
 
   right: ${(props) => props.$position.x}px;
   top: ${(props) => props.$position.y}px;
+  @media (max-width: 768px) {
+    /* display: flex; */
+    /* flex-direction: row; */
+  }
 `;
 
 const StyledButton = styled.button`

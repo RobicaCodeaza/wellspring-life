@@ -18,6 +18,16 @@ const StyledTodayItem = styled.li`
   &:first-child {
     border-top: 1px solid var(--color-grey-100);
   }
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    /* display: grid; */
+    /* grid-template-columns: 9rem 2rem 1fr 7rem 9rem; */
+  }
 `;
 
 const Guest = styled.div`
