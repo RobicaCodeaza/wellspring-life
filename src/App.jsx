@@ -29,6 +29,8 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  console.log('logs');
+
   return (
     <DarkModeProvider>
       <MobileNavProvider>
