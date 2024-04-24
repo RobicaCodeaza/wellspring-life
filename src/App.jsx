@@ -30,6 +30,7 @@ const queryClient = new QueryClient({
 
 function App() {
   console.log('Added test');
+  console.log('Added test 1');
 
   return (
     <DarkModeProvider>
