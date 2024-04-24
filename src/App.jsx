@@ -29,6 +29,8 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  console.log('Added test');
+
   return (
     <DarkModeProvider>
       <MobileNavProvider>
