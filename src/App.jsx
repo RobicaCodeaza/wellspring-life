@@ -29,6 +29,8 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  console.log('new commit');
+
   return (
     <DarkModeProvider>
       <MobileNavProvider>
