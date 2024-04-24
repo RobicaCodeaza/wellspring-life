@@ -29,7 +29,7 @@ const queryClient = new QueryClient({
 });
 
 function App() {
-  console.log('new commit');
+  console.log('commit/deploy');
 
   return (
     <DarkModeProvider>
