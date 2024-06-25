@@ -27,8 +27,8 @@ function CreateCabinForm({ cabin }) {
   });
 
   function onSubmit(data) {
-    // mutate({ ...data, image: data.image[0] });
-    console.log(data);
+    mutate({ ...data, image: data.image[0] });
+    // console.log(data);
   }
   function onError(errors) {
     // console.log(errors);
@@ -94,7 +94,7 @@ function CreateCabinForm({ cabin }) {
       >
         <Textarea
           disabled={isCreating}
-          type='number'
+          type='text'
           id='description'
           defaultValue=''
           {...register('description', { required: 'This field is required' })}

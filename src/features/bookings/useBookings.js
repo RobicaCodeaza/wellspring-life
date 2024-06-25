@@ -38,7 +38,6 @@ export function useBookings() {
     queryClient.prefetchQuery({
       queryKey: ['bookings', filter, sortBy, page + 1],
       queryFn: () => {
-        console.log('pre-fetch');
         return getBookings({ filter, sortBy, page: page + 1 });
       },
       retry: false,
