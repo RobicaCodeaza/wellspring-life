@@ -1,14 +1,12 @@
-# 🎴 WellSpring Life - [Link](https://robicacodeaza-wellspring-life.vercel.app)
-
-A card app created for perfecting your revisions before your Multiple Choice Exams. This way the students can engage in a more pleasurable experience when Reviewing possible Chapters - Subchapters - Lessons via Questions with multiple-choice variants or even Questions that require self-rating your knowledge. It is a perfect App for medicine students or students who want to outperform the job competition when it comes to assignments tests.
-
+# 🌱 WellSpring Life - [Link](https://robicacodeaza-wellspring-life.vercel.app)
+An administration app created for business owners who need to manage multiple properties(cabins as we call them). It offers easy access and useful features from bookings to settings to facilitate obtaining a better profit, everything from a SaSS tailored to every specific business.
 
 
 ## ❇️ Technologies
 
 - `Vite`
 - `React.js`
-- `TypeScript`
+- `JavaScript`
 - `React-Router`
 - `React Query`
 - `React-Hook-Form`
@@ -27,9 +25,9 @@ A card app created for perfecting your revisions before your Multiple Choice Exa
 
 ## 💎 Features
 
-Here's what you can do with MemoCards:
+Here's what you can do with WellSpring - Life:
 
-- **Deck Creation**: Working as a box that contains the *Cards*. It is the *Lesson* from a select *Chapter* and *Subchapter* allowing us to stack cards in it and test them. 
+- **Dashboard**: Here you 
 
 - **Cards Creation**: Working as a question and answer holder. It allows us to create questions with multiple-choice answers or even questions with one answer(**Flipping Card**) that require us to review our knowledge to that specific question. 
 
