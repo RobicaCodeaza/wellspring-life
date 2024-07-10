@@ -77,9 +77,10 @@ During this project, I've picked up important skills and a better understanding 
 
 - Supabase Provides a CLI for JavaScript but sometimes updating Arrays inside a Row needed a personal touch and help from our friend SQL.
 
-### 🪝 React Custom Hooks and TypeScript Practices:
+### 🪝 React Custom Hooks
 
-- TypeScript allowed to catch errors early in production while working with defined data provided by Supabase dataTypes. Defining custom hooks(ex: usage of local storage) represented a good principle of DRY.
+- Defining custom hooks(ex: usage of local storage) represented a good principle of DRY.
+- It allows creating of a more structural programming experience and provides a clear vision of the functionality of every component.
 
 ### 🏰 UI Component Library and Reusable Components - Styled Components
 
